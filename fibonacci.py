@@ -1,6 +1,5 @@
 from time import sleep
 import matplotlib.pyplot as plt
-import numpy as np
 
 def Fibonacci_Series(n): 
     sequence = [0, 1]
