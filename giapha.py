@@ -19,6 +19,7 @@ def inputfunc():
     while True:
         so_nam = input("Nhập số năm: ")
         if so_nam.isdigit() and (so_nam := int(so_nam)) > 0:
+            while True:
                 thehe_tang = input("Nhập số năm để sinh ra thế hệ mới: ")
                 if thehe_tang.isdigit() and (thehe_tang := int(thehe_tang)) >= 18:
                     so_the_he = so_nam // thehe_tang
