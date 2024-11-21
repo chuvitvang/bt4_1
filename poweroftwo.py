@@ -7,6 +7,7 @@ def poweroftwo(n):
         i += 1  # Tăng thế hệ
     print(ketqua)
     return ketqua
+    
 def plot(data,so_nam,thehe_tang):
     plt.plot(data, marker='o', linestyle='-', color='b')
     plt.title(f"Biểu đồ gia phả theo từng thế hệ trong {so_nam} năm,với {thehe_tang} năm thêm 1 thế hệ")
