@@ -60,7 +60,6 @@ def plot_fibonacci(sequence):
     plt.show()
 
 def Fibonacci_Program():
-    ktmk()
     while True:
         end = Fibonacci_Series()
         if input("Nhập 'end_Fibo' để thoát, nhấn bất kỳ phím nào để tiếp tục: ").strip() == "end_Fibo":
@@ -70,6 +69,7 @@ def Fibonacci_Program():
         sleep(3)
 
 def main():
+    ktmk()
     end = Fibonacci_Program()
     plot_fibonacci(end)
 
