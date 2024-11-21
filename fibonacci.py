@@ -60,21 +60,24 @@ def plot_fibonacci(sequence): # Vẽ biểu đồ chuỗi Fibonacci dưới dạ
     plt.tight_layout()#điều chỉnh khoảng cách giữa các phần tử trong biểu đồ
     plt.show() # hiển thị biểu đồ
 
-def Fibonacci_Program(): #tính toán và hiển thị chuỗi Fibonacci.
-    while True:
-        end = Fibonacci_Series()
+def Fibonacci_Program(): #hàm kết thúc hay khoong
+    while True: 
         if input("Nhập 'end_Fibo' để thoát, nhấn bất kỳ phím nào để tiếp tục: ").strip() == "end_Fibo":
             print("Kết thúc chương trình.")
-            return end
-        print("Vui lòng chờ 3s.")
-        sleep(3)
-
+            return True
+        else:
+            print("Vui lòng chờ 3s.")
+            sleep(3)
+            return
 def main():
     ktmk() # Kiểm tra mật khẩu trước khi tiếp tục
-    end = Fibonacci_Program() # Chạy chương trình Fibonacci
+    while True:
+         end = Fibonacci_Series()
+         if Fibonacci_Program() == True:
+            break
+
     plot_fibonacci(end) # Vẽ biểu đồ chuỗi Fibonacci cuối cùng
+
 # Gọi hàm main để bắt đầu chương trình
 main()
-
-
 
