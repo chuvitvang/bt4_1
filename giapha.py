@@ -16,10 +16,17 @@ def plot(data,so_nam,thehe_tang):
     plt.show()
 
 def inputfunc():
-    so_nam = int(input("Nhập số năm: "))
-    thehe_tang = int(input("Nhập số năm để sinh ra thế hệ mới: "))
-    so_the_he = so_nam // thehe_tang
-    return so_the_he,so_nam,thehe_tang
+    while True:
+        so_nam = input("Nhập số năm: ")
+        if so_nam.isdigit() and (so_nam := int(so_nam)) > 0:
+                thehe_tang = input("Nhập số năm để sinh ra thế hệ mới: ")
+                if thehe_tang.isdigit() and (thehe_tang := int(thehe_tang)) >= 18:
+                    so_the_he = so_nam // thehe_tang
+                    return so_the_he,so_nam,thehe_tang
+                else:
+                    print("Số năm sinh ra thế hệ phải lớn hơn hoặc bằng 18 và là số nguyên")
+        else:
+            print("Số năm phải lớn hơn 0 và là số nguyên")
 
 def main():
     so_the_he, so_nam, thehe_tang = inputfunc()
